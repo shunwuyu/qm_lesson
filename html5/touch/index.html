@@ -59,6 +59,9 @@
     <div class="imgBox">
       <img src="https://alloyteam.github.io/AlloyFinger/asset/test.png" alt="" id="rotateImg">
     </div>
+    <div class="imgBox">
+        <img src="https://alloyteam.github.io/AlloyFinger/asset/test.png" alt="" id="pinchRotateImg">
+      </div>
   </div>
   <script src="https://alloyteam.github.io/AlloyFinger/asset/transform.js"></script>
   <script src="https://alloyteam.github.io/AlloyFinger/alloy_finger.js"></script>
@@ -76,23 +79,23 @@
     }
   })
   const rotateImg = document.getElementById('rotateImg');
-  Transform(pinchImg);
+  Transform(rotateImg);
   new AlloyFinger(rotateImg, {
     rotate: function(evt) {
       rotateImg.rotateZ += evt.angle;
     }
   });
-  const pinchRoateImg = document.getElementById('pinchRotateImg');
-  Transform(pinchRoateImg)
-  new AlloyFinger(pinchRoateImg, {
+  const pinchRotateImg = document.getElementById('pinchRotateImg');
+  Transform(pinchRotateImg)
+  new AlloyFinger(pinchRotateImg, {
     rotate: function(evt) {
-      pinchRoateImg.rotateZ += evt.angle
+      pinchRotateImg.rotateZ += evt.angle
     },
     multipointStart: function() {
-      initScale = pinchRoateImg.scaleX;
+      initScale = pinchRotateImg.scaleX;
     },
     pinch: function(evt) {
-      pinchRoateImg.scaleX = pinchRoateImg.scaleY = initScale * evt.zoom;
+      pinchRotateImg.scaleX = pinchRotateImg.scaleY = initScale * evt.zoom;
     }
   })
   </script>
