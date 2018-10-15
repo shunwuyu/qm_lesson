@@ -1,35 +1,165 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>星球大战-原力觉醒</title>
-  <link rel="stylesheet" href="/css.css">
+    <meta charset="UTF-8">
+    <title>Star Wars -- The Force Awakens CSS Animation</title>
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <style>
+    * {
+        margin: 0;
+        padding: 0;
+    }
+    body{
+        background:url(/images/bg.jpg);
+        background-color: #000;
+    }
+    img {
+        width: 100%;
+    }
+    .starwars-demo {
+        height: 17em;
+        position: absolute;
+        left: 50%;
+        top: 53%;
+        width: 34em;
+        -webkit-transform: translate(-50%,-50%);
+        -ms-transform: translate(-50%,-50%);
+        transform: translate(-50%,-50%);
+        -webkit-perspective:800px;
+	    perspective:800px;
+        -webkit-transform-style:preserve3d;
+        -ms-transform-style:preserve3d;
+        transform-style:preserve3d;
+    }
+    .star,.wars,.byline {
+        position: absolute;
+    }
+    .star {
+        top:-0.75em;
+        -webkit-animation: star 10s ease-out infinite;
+        -ms-animation: star 10s ease-out infinite;
+        animation: star 10s ease-out infinite;
+    }
+    @-webkit-keyframes star {
+        0% {
+            opacity: 0;
+            -webkit-transform: scale(1.5);
+            -ms-transform: scale(1.5);
+            transform: scale(1.5);
+        }
+        20% {
+            opacity:1;
+        }
+        89% {
+            opacity:1;
+            -webkit-transform: scale(1);
+            -ms-transform: scale(1);
+            transform: scale(1);
+        }
+        100%{
+            opacity:0;
+            -webkit-transform:translateZ(-400em);
+            transform:translateZ(-400em);
+        }
+    }
+    @keyframes star {
+        0% {
+            opacity: 0;
+            -webkit-transform: scale(1.5);
+            -ms-transform: scale(1.5);
+            transform: scale(1.5);
+        }
+        20% {
+            opacity:1;
+        }
+        89% {
+            opacity:1;
+            -webkit-transform: scale(1);
+            -ms-transform: scale(1);
+            transform: scale(1);
+        }
+        100%{
+            opacity:0;
+            -webkit-transform:translateZ(-400em);
+            transform:translateZ(-400em);
+        }
+    }
+    .wars {
+        bottom: -0.5em;
+        -webkit-animation: wars 10s ease-out infinite;
+        -ms-animation: wars 10s ease-out infinite;
+        animation: wars 10s ease-out infinite;
+    }
+    @-webkit-keyframes wars {
+        0%{opacity:0;-webkit-transform:scale(1.5) translateY(0.5em);
+	    transform:scale(1.5) translateY(0.5em);}
+	    20%{opacity:1;}
+	    90%{opacity:1;-webkit-transform:scale(1);transform:scale(1);}
+	    100%{opacity:0;-webkit-transform:translateZ(-400em);transform:translateZ(-400em);
+        }
+    }
+    @keyframes wars {
+        0%{opacity:0;-webkit-transform:scale(1.5) translateY(0.5em);
+	    transform:scale(1.5) translateY(0.5em);}
+	    20%{opacity:1;}
+	    90%{opacity:1;-webkit-transform:scale(1);transform:scale(1);}
+	    100%{opacity:0;-webkit-transform:translateZ(-400em);transform:translateZ(-400em);
+        }
+    }
+    .byline {
+        color:#fff;
+        font-family: Lato;
+        font-size: 2.25em;
+        left:-2em;
+        letter-spacing: 0.4em;
+        right:-2em;
+        top:40%;
+        text-transform: uppercase;
+    }
+    .byline span{
+        display: inline-block;
+    }
+    .byline {
+        animation:move-byline 10s linear infinite;
+    }
+    .byline span {
+        animation:spin-letters 10s linear infinite;
+    }
+    @keyframes move-byline {
+        0%{
+            transform: translateZ(5em);
+        }
+        100% {
+            transform:translateZ(0);
+        }
+    }
+    @keyframes spin-letters{
+        0%,100% {
+            opacity:0;
+            transform:rotateY(90deg);
+        }
+        30% {
+            opacity:1;
+        }
+        70%,80% {
+            transform:rotateY(0);
+            opacity:1;
+        }
+        88%,100% {
+            opacity:0;
+        }
+    }
+    </style>
 </head>
 <body>
-  
-  <div class="starwars-demo">
-    <img src="/images/star.svg" alt="星球" class="star">
-    <img src="/images/wars.svg" alt="大战" class="wars">
+<div class="starwars-demo">
+    <img src="./images/star.svg" alt="star" class="star">
+    <img src="./images/wars.svg" alt="wars" class="wars">
     <h2 class="byline">
-      <span>T</span>
-      <span>h</span>
-      <span>e</span>
-      <span>F</span>
-      <span>o</span>
-      <span>r</span>
-      <span>c</span>
-      <span>e</span>
-      <span>A</span>
-      <span>w</span>
-      <span>a</span>
-      <span>k</span>
-      <span>e</span>
-      <span>n</span>
-      <span>s</span>
+        <span>T</span><span>h</span><span>e</span>
+		<span>F</span><span>o</span><span>r</span><span>c</span><span>e</span>
+		<span>A</span><span>w</span><span>a</span><span>k</span><span>e</span><span>n</span><span>s</span>
     </h2>
-  </div>
-  
+</div>
 </body>
 </html>

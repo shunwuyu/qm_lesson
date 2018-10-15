@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <style>
+  * {
+    margin: 0;
+    padding: 0;
+  }
+  ul, li {
+    list-style: none;
+  }
+  a {
+    text-decoration: none;
+  }
+  ul.quick-nav {
+    margin: 20px 18px 0 18px;
+    padding-top: 6px;
+    overflow: hidden;
+  }
+  .quick-nav > li {
+    float: left;
+    width: 50%;
+    box-sizing: border-box;
+    font-size: 15px;
+    padding: 3px;
+    /* background: green; */
+  }
+  /* 行内标签inline  块级标签*/
+  .quick-nav > li > a {
+    background: #f6f6f6;
+    color: #494949;
+    display: block;
+    /* width: 100%; */
+    text-align: center;
+    line-height: 20px;
+    padding: 12px 0;
+    border-radius: 2px;
+  }
+
+  </style>
+</head>
+<body>
+  <ul class="quick-nav">
+    <li><a href="#">影院热映</a></li>
+    <li><a href="#">豆瓣日历</a></li>
+    <li><a href="#">豆瓣时间</a></li>
+    <li><a href="#">使用豆瓣App</a></li>
+  </ul>
+  <section id="recommend-feed">
+    a.feed-item>(div.feed-content>div.cover+h3+p)+div.author
+  </section>
+</body>
+</html>

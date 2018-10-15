@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <style>
+  #user_name.err {
+    border-color: red;
+  }
+  </style>
+</head>
+<body>
+<form method="post" action="/">
+  <div class="fieldset">
+    <label for="">美女名字:</label>
+    <input type="text" id="user_name" placeholder="请输入女朋友的名字" />
+  </div>
+  <div class="fieldset">
+    <a href="javascript:void(0);" class="button add_btn">新增</a>
+  </div>
+  <div class="fieldset">
+    <div class="msg"></div>
+  </div>
+</form>
+<script>
+const qdLoves = [];
+const addBtn = document.querySelector('.add_btn'); 
+const userInput = document.querySelector('#user_name');
+const msg = document.querySelector('.msg');
+
+addBtn.addEventListener('click', function() {
+  let username = userInput.value;
+  if (username === '') {
+    userInput.focus();
+    return;
+  }
+
+  // 重复的数组项不加
+  for(let i = 0; i < qdLoves.length; i++) {
+    if (qdLoves[i] === username) {
+      userInput.classList.add('err');
+      // userInput.focus();
+      return;
+    }
+  }
+
+   // console.log(username);
+  qdLoves.push(username);
+  let loveText = `东哥交了${qdLoves.length}位女朋友,她们是${qdLoves.join(' ')}`;
+  msg.innerHTML = loveText;
+  userInput.value = '';
+});
+
+userInput.addEventListener('focus', function() {
+  if (this.classList.contains('err'))
+    this.classList.remove('err');
+})
+
+// const qdLoves = ['龚小京'];
+// console.log(qdLoves.length);
+// qdLoves.push('章泽天');
+// console.log(qdLoves.length);
+// console.log(qdLoves.join('-'));
+// qdLoves.push('蒋娉婷');
+// console.log(qdLoves.length);
+// console.log(qdLoves.join('-'));
+
+// qdLoves.
+</script> 
+</body>
+</html>
