@@ -1,0 +1,6 @@
+.wux-class-badge{
+  background: green!important;
+}
+.example__badge {
+  padding-top: 40rpx;
+}

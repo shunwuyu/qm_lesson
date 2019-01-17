@@ -1,0 +1,9 @@
+
+@import "https://cdn.bootcss.com/antd-mobile/2.2.8/antd-mobile.min.css";
+* {
+  margin: 0;
+  padding: 0;
+}
+.normal {
+  background: #79B2F2;
+}

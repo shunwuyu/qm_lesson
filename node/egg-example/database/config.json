@@ -1,0 +1,21 @@
+{
+  
+  "development": {
+    "use_env_variable": true,
+    "username": "root",
+    "password": "1234567890",
+    "database": "egg-sequelize-doc-default",
+    "port": 33306,
+    "host": "127.0.0.1",
+    "dialect": "mysql"
+  },
+  "test": {
+    "use_env_variable": true,
+    "username": "root",
+    "password": "1234567890",
+    "port": 33306,
+    "database": "egg-sequelize-doc-unittest",
+    "host": "127.0.0.1",
+    "dialect": "mysql"
+  }
+}

@@ -1,0 +1,10 @@
+<view class="container">
+  <wux-badge count="9" wux-class-badge="wux-class-badge"/>
+  <wux-badge count="110" wux-class-badge="wux-class-badge"/>
+  <wux-badge status="success" text="支付成功"/>
+  <wux-badge dot="true" />
+  <wux-badge showZero="true" count="0"/>
+  <wux-badge count="9999" overflow-count="1024">
+      <view class="example__badge">评论</view>
+  </wux-badge>
+</view>
